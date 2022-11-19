@@ -2,15 +2,26 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>MY CARS</title>
+    <title>Тачки</title>
 </head>
 <body>
 <div>
-    <H1>Cars</H1>
-    <p th:text="${show}"></p>
-    <th:block th:each="car : ${cars}">
-        <p th:text="${car.toString()}"></p>
-    </th:block>
+    <H1>Тачки</H1>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Model</td>
+            <td>Series</td>
+        </tr>
+        <th:block th:each="car : ${cars}">
+            <tr>
+                <td th:text="${car.getCarId()}">ID</td>
+                <td th:text="${car.getCarModel()}">Model</td>
+                <td th:text="${car.getCarSeries()}">Series</td>
+            </tr>
+        </th:block>
+    </table>
+
 </div>
 </body>
 </html>
