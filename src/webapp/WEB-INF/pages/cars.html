@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MY CARS</title>
+</head>
+<body>
+<div>
+    <H1>Cars</H1>
+    <p th:text="${show}"></p>
+    <th:block th:each="car : ${cars}">
+        <p th:text="${car.toString()}"></p>
+    </th:block>
+</div>
+</body>
+</html>
